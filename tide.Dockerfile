@@ -1,1 +1,1 @@
-FROM gcr.io/k8s-prow/tide:v20190722-4f2588df33
+FROM gcr.io/k8s-prow/tide:v20190724-1fcd9e27e3
