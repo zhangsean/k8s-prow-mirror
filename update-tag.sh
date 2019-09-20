@@ -17,3 +17,9 @@ for file in $(ls *.Dockerfile); do
     sed -i '' "s/$OLD_TAG/$NEW_TAG/g" $file
     cat $file
 done
+read -p "Continue to change tag? (y/n):" CONFIRM
+if [ "$CONFIRM" != "y" ]; then exit 1; fi
+git commit -a -m "Bump to $NEW_TAG"
+git push
+git push --tags
+
