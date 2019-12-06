@@ -21,5 +21,6 @@ read -p "Continue to change tag? (y/n):" CONFIRM
 if [ "$CONFIRM" != "y" ]; then exit 1; fi
 git commit -a -m "Bump to $NEW_TAG"
 git push
+git tag $NEW_TAG
 git push --tags
 
