@@ -52,16 +52,16 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Changing tag from $CURRENT to $NEW_TAG"
-          sed -i "s/$CURRENT/$NEW_TAG/g" README.md
+          echo "Changing tag from $CURRENT to $LATEST"
+          sed -i "s/$CURRENT/$LATEST/g" README.md
           for file in $(ls *.Dockerfile); do
               echo $file
-              sed -i "s/$CURRENT/$NEW_TAG/g" $file
+              sed -i "s/$CURRENT/$LATEST/g" $file
               cat $file
           done
           git config user.email zxf2342@qq.com
           git config user.name zhangsean
-          git commit -a -m "Bump to prow $NEW_TAG"
+          git commit -a -m "Bump to prow $LATEST"
           git push
 
       - name: Create new release
