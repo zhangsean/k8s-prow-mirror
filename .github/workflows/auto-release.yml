@@ -59,6 +59,8 @@ jobs:
               sed -i "s/$CURRENT/$NEW_TAG/g" $file
               cat $file
           done
+          git config user.email zxf2342@qq.com
+          git config user.name zhangsean
           git commit -a -m "Bump to prow $NEW_TAG"
           git push
 
