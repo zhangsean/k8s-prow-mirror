@@ -1,0 +1,76 @@
+#=================================================
+# https://github.com/zhangsean/k8s-prow
+# Description: Auto check latest prow release and tag docker image zhangsean/k8s-prow using GitHub Actions
+# License: Apache V2.0
+# Author: ZhangSean
+#=================================================
+
+name: Follow up prow release
+
+on:
+  schedule:
+    - cron: 1 23 * * *
+  watch:
+    types: [started]
+    if: github.event.repository.owner.id == github.event.sender.id
+  push:
+    paths:
+      - '.github/workflows/*.yml'
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+
+      - name: Check prow release
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          git fetch --tags
+          export CURRENT=$(grep k8s-prow deck.Dockerfile | awk -F: '{print $2}')
+          echo "CURRENT=$CURRENT"
+          export LATEST=$(curl -sSL https://github.com/kubernetes/test-infra/raw/master/prow/cluster/starter.yaml | grep image:\ gcr | awk -F: '{print $3}' | head -n 1)
+          echo "LATEST=$LATEST"
+          if [ "$LATEST" != "$CURRENT" ]; then
+            echo "New prow release: $LATEST"
+            echo "::set-env name=CURRENT::$CURRENT"
+            echo "::set-env name=LATEST::$LATEST"
+          else
+            echo "No new prow release"
+            echo "::set-env name=LATEST::"
+          fi
+
+      - name: Bump to new prow tag
+        if: success() && env.CURRENT != '' && env.LATEST != ''
+        env:
+          DEBIAN_FRONTEND: noninteractive
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Changing tag from $CURRENT to $NEW_TAG"
+          sed -i '' "s/$CURRENT/$NEW_TAG/g" README.md
+          for file in $(ls *.Dockerfile); do
+              echo $file
+              sed -i '' "s/$CURRENT/$NEW_TAG/g" $file
+              cat $file
+          done
+          git commit -a -m "Bump to prow $NEW_TAG"
+          git push
+
+      - name: Create new release
+        uses: actions/create-release@v1
+        if: success() && env.CURRENT != '' && env.LATEST != ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.LATEST }}
+          release_name: ${{ env.LATEST }}
+          body: |
+            Bump to prow ${{ env.LATEST }}
+          draft: false
+          prerelease: false
