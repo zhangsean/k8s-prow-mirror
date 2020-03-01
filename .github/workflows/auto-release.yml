@@ -53,10 +53,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "Changing tag from $CURRENT to $NEW_TAG"
-          sed -i '' "s/$CURRENT/$NEW_TAG/g" README.md
+          sed -i "s/$CURRENT/$NEW_TAG/g" README.md
           for file in $(ls *.Dockerfile); do
               echo $file
-              sed -i '' "s/$CURRENT/$NEW_TAG/g" $file
+              sed -i "s/$CURRENT/$NEW_TAG/g" $file
               cat $file
           done
           git commit -a -m "Bump to prow $NEW_TAG"
