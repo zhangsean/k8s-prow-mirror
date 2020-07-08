@@ -4,13 +4,13 @@ Prow images mirror.
 
 gcr.io | docker.io
 ---|---
-gcr.io/k8s-prow/deck:v20200703-4509c055d7 | zhangsean/k8s-prow-deck:v20200703-4509c055d7
-gcr.io/k8s-prow/hook:v20200703-4509c055d7 | zhangsean/k8s-prow-hook:v20200703-4509c055d7
-gcr.io/k8s-prow/horologium:v20200703-4509c055d7 | zhangsean/k8s-prow-horologium:v20200703-4509c055d7
-gcr.io/k8s-prow/plank:v20200703-4509c055d7 | zhangsean/k8s-prow-plank:v20200703-4509c055d7
-gcr.io/k8s-prow/sinker:v20200703-4509c055d7 | zhangsean/k8s-prow-sinker:v20200703-4509c055d7
-gcr.io/k8s-prow/status-reconciler:v20200703-4509c055d7 | zhangsean/k8s-prow-status-reconciler:v20200703-4509c055d7
-gcr.io/k8s-prow/tide:v20200703-4509c055d7 | zhangsean/k8s-prow-tide:v20200703-4509c055d7
+gcr.io/k8s-prow/deck:v20200708-1254fdd37f | zhangsean/k8s-prow-deck:v20200708-1254fdd37f
+gcr.io/k8s-prow/hook:v20200708-1254fdd37f | zhangsean/k8s-prow-hook:v20200708-1254fdd37f
+gcr.io/k8s-prow/horologium:v20200708-1254fdd37f | zhangsean/k8s-prow-horologium:v20200708-1254fdd37f
+gcr.io/k8s-prow/plank:v20200708-1254fdd37f | zhangsean/k8s-prow-plank:v20200708-1254fdd37f
+gcr.io/k8s-prow/sinker:v20200708-1254fdd37f | zhangsean/k8s-prow-sinker:v20200708-1254fdd37f
+gcr.io/k8s-prow/status-reconciler:v20200708-1254fdd37f | zhangsean/k8s-prow-status-reconciler:v20200708-1254fdd37f
+gcr.io/k8s-prow/tide:v20200708-1254fdd37f | zhangsean/k8s-prow-tide:v20200708-1254fdd37f
 
 ## Usage
 
