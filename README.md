@@ -2,15 +2,15 @@
 
 Prow images mirror.
 
-gcr.io | docker.io
+gcr.io | docker hub
 ---|---
-gcr.io/k8s-prow/deck:v20200818-6369dfaef5 | zhangsean/k8s-prow-deck:v20200818-6369dfaef5
-gcr.io/k8s-prow/hook:v20200818-6369dfaef5 | zhangsean/k8s-prow-hook:v20200818-6369dfaef5
-gcr.io/k8s-prow/horologium:v20200818-6369dfaef5 | zhangsean/k8s-prow-horologium:v20200818-6369dfaef5
-gcr.io/k8s-prow/plank:v20200818-6369dfaef5 | zhangsean/k8s-prow-plank:v20200818-6369dfaef5
-gcr.io/k8s-prow/sinker:v20200818-6369dfaef5 | zhangsean/k8s-prow-sinker:v20200818-6369dfaef5
-gcr.io/k8s-prow/status-reconciler:v20200818-6369dfaef5 | zhangsean/k8s-prow-status-reconciler:v20200818-6369dfaef5
-gcr.io/k8s-prow/tide:v20200818-6369dfaef5 | zhangsean/k8s-prow-tide:v20200818-6369dfaef5
+gcr.io/k8s-prow/deck:v20200818-6369dfaef5 | [zhangsean/k8s-prow-deck](https://hub.docker.com/r/zhangsean/k8s-prow-deck):v20200818-6369dfaef5
+gcr.io/k8s-prow/hook:v20200818-6369dfaef5 | [zhangsean/k8s-prow-hook](https://hub.docker.com/r/zhangsean/k8s-prow-hook):v20200818-6369dfaef5
+gcr.io/k8s-prow/horologium:v20200818-6369dfaef5 | [zhangsean/k8s-prow-horologium](https://hub.docker.com/r/zhangsean/k8s-prow-horologium):v20200818-6369dfaef5
+gcr.io/k8s-prow/plank:v20200818-6369dfaef5 | [zhangsean/k8s-prow-plank](https://hub.docker.com/r/zhangsean/k8s-prow-plank):v20200818-6369dfaef5
+gcr.io/k8s-prow/sinker:v20200818-6369dfaef5 | [zhangsean/k8s-prow-sinker](https://hub.docker.com/r/zhangsean/k8s-prow-sinker):v20200818-6369dfaef5
+gcr.io/k8s-prow/status-reconciler:v20200818-6369dfaef5 | [zhangsean/k8s-prow-status-reconciler](https://hub.docker.com/r/zhangsean/k8s-prow-status-reconciler):v20200818-6369dfaef5
+gcr.io/k8s-prow/tide:v20200818-6369dfaef5 | [zhangsean/k8s-prow-tide](https://hub.docker.com/r/zhangsean/k8s-prow-tide):v20200818-6369dfaef5
 
 ## Usage
 
