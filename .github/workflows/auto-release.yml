@@ -35,7 +35,7 @@ jobs:
           git fetch --tags
           export CURRENT=$(grep k8s-prow deck.Dockerfile | awk -F: '{print $2}')
           echo "CURRENT=$CURRENT"
-          export LATEST=$(curl -sSL https://github.com/kubernetes/test-infra/raw/master/config/prow/cluster/starter.yaml | sed -n '/hook/s/.*:\(v.*\)/\1/p')
+          export LATEST=$(curl -sSL https://github.com/kubernetes/test-infra/raw/master/config/prow/cluster/starter-s3.yaml | sed -n '/hook/s/.*:\(v.*\)/\1/p')
           echo "LATEST=$LATEST"
           if [ "$LATEST" != "$CURRENT" ]; then
             echo "New prow release: $LATEST"

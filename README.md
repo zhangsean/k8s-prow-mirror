@@ -16,7 +16,7 @@ gcr.io/k8s-prow/tide:v20200710-f1d386e7c4 | zhangsean/k8s-prow-tide:v20200710-f1
 
 ```bash
 # Deploy latest prow
-curl -sSL https://github.com/kubernetes/test-infra/raw/master/config/prow/cluster/starter.yaml | sed 's|gcr.io/k8s-prow/|zhangsean/k8s-prow-|g' | kubectl apply -f -
+curl -sSL https://github.com/kubernetes/test-infra/raw/master/config/prow/cluster/starter-s3.yaml | sed 's|gcr.io/k8s-prow/|zhangsean/k8s-prow-|g' | kubectl apply -f -
 # Or change local starter.yaml
 sed -i '' 's|gcr.io/k8s-prow/|zhangsean/k8s-prow-|g' starter.yaml
 ```
