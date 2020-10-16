@@ -38,12 +38,12 @@ jobs:
           export LATEST=$(curl -sSL https://github.com/kubernetes/test-infra/raw/master/config/prow/cluster/starter-s3.yaml | sed -n '/hook/s/.*:\(v.*\)/\1/p')
           echo "LATEST=$LATEST"
           if [ "$LATEST" != "$CURRENT" ]; then
-            echo "New prow release: $LATEST"
-            echo "::set-env name=CURRENT::$CURRENT"
-            echo "::set-env name=LATEST::$LATEST"
+            echo "New Prow release: $LATEST"
+            echo "CURRENT=$CURRENT" >> $GITHUB_ENV
+            echo "LATEST=$LATEST" >> $GITHUB_ENV
           else
-            echo "No new prow release"
-            echo "::set-env name=LATEST::"
+            echo "No new Prow release"
+            echo "LATEST=" >> $GITHUB_ENV
           fi
 
       - name: Bump to new prow tag
