@@ -1,1 +1,1 @@
-FROM gcr.io/k8s-prow/deck:v20201228-15d664642a
+FROM gcr.io/k8s-prow/deck:v20210105-c50d055243
