@@ -1,1 +1,1 @@
-FROM gcr.io/k8s-prow/hook:v20210106-34a4396230
+FROM gcr.io/k8s-prow/hook:v20210107-0880e50620
