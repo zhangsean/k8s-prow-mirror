@@ -1,1 +1,1 @@
-FROM gcr.io/k8s-prow/sinker:v20210310-26726f9bd5
+FROM gcr.io/k8s-prow/sinker:v20210310-a49501d5de
