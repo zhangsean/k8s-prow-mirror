@@ -1,1 +1,1 @@
-FROM gcr.io/k8s-prow/status-reconciler:v20210401-1e772aaa42
+FROM gcr.io/k8s-prow/status-reconciler:v20210404-ef7abaaa70
