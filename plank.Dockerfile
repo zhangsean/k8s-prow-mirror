@@ -1,1 +1,1 @@
-FROM gcr.io/k8s-prow/plank:v20210507-5789114d16
+FROM gcr.io/k8s-prow/plank:v20210510-9df9f3186f
