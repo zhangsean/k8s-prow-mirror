@@ -4,13 +4,13 @@ Prow images mirror.
 
 gcr.io | docker hub
 ---|---
-gcr.io/k8s-prow/deck:v20210824-b1e67c13fb | [zhangsean/k8s-prow-deck](https://hub.docker.com/r/zhangsean/k8s-prow-deck):v20210824-b1e67c13fb
-gcr.io/k8s-prow/hook:v20210824-b1e67c13fb | [zhangsean/k8s-prow-hook](https://hub.docker.com/r/zhangsean/k8s-prow-hook):v20210824-b1e67c13fb
-gcr.io/k8s-prow/horologium:v20210824-b1e67c13fb | [zhangsean/k8s-prow-horologium](https://hub.docker.com/r/zhangsean/k8s-prow-horologium):v20210824-b1e67c13fb
-gcr.io/k8s-prow/plank:v20210824-b1e67c13fb | [zhangsean/k8s-prow-plank](https://hub.docker.com/r/zhangsean/k8s-prow-plank):v20210824-b1e67c13fb
-gcr.io/k8s-prow/sinker:v20210824-b1e67c13fb | [zhangsean/k8s-prow-sinker](https://hub.docker.com/r/zhangsean/k8s-prow-sinker):v20210824-b1e67c13fb
-gcr.io/k8s-prow/status-reconciler:v20210824-b1e67c13fb | [zhangsean/k8s-prow-status-reconciler](https://hub.docker.com/r/zhangsean/k8s-prow-status-reconciler):v20210824-b1e67c13fb
-gcr.io/k8s-prow/tide:v20210824-b1e67c13fb | [zhangsean/k8s-prow-tide](https://hub.docker.com/r/zhangsean/k8s-prow-tide):v20210824-b1e67c13fb
+gcr.io/k8s-prow/deck:v20210825-9bfc605abc | [zhangsean/k8s-prow-deck](https://hub.docker.com/r/zhangsean/k8s-prow-deck):v20210825-9bfc605abc
+gcr.io/k8s-prow/hook:v20210825-9bfc605abc | [zhangsean/k8s-prow-hook](https://hub.docker.com/r/zhangsean/k8s-prow-hook):v20210825-9bfc605abc
+gcr.io/k8s-prow/horologium:v20210825-9bfc605abc | [zhangsean/k8s-prow-horologium](https://hub.docker.com/r/zhangsean/k8s-prow-horologium):v20210825-9bfc605abc
+gcr.io/k8s-prow/plank:v20210825-9bfc605abc | [zhangsean/k8s-prow-plank](https://hub.docker.com/r/zhangsean/k8s-prow-plank):v20210825-9bfc605abc
+gcr.io/k8s-prow/sinker:v20210825-9bfc605abc | [zhangsean/k8s-prow-sinker](https://hub.docker.com/r/zhangsean/k8s-prow-sinker):v20210825-9bfc605abc
+gcr.io/k8s-prow/status-reconciler:v20210825-9bfc605abc | [zhangsean/k8s-prow-status-reconciler](https://hub.docker.com/r/zhangsean/k8s-prow-status-reconciler):v20210825-9bfc605abc
+gcr.io/k8s-prow/tide:v20210825-9bfc605abc | [zhangsean/k8s-prow-tide](https://hub.docker.com/r/zhangsean/k8s-prow-tide):v20210825-9bfc605abc
 
 ## Usage
 
