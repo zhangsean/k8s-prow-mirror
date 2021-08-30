@@ -76,3 +76,96 @@ jobs:
             Bump to prow ${{ env.LATEST }}
           draft: false
           prerelease: false
+
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+        if: success() && env.LATEST != ''
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        if: success() && env.LATEST != ''
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v1
+        if: success() && env.LATEST != ''
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Build and push deck
+        uses: docker/build-push-action@v2
+        if: success() && env.LATEST != ''
+        with:
+          context: .
+          file: deck.Dockerfile
+          push: true
+          tags: |
+            zhangsean/k8s-prow-deck:latest,
+            zhangsean/k8s-prow-deck:${{ env.LATEST }}
+      -
+        name: Build and push hook
+        uses: docker/build-push-action@v2
+        if: success() && env.LATEST != ''
+        with:
+          context: .
+          file: hook.Dockerfile
+          push: true
+          tags: |
+            zhangsean/k8s-prow-hook:latest,
+            zhangsean/k8s-prow-hook:${{ env.LATEST }}
+      -
+        name: Build and push horologium
+        uses: docker/build-push-action@v2
+        if: success() && env.LATEST != ''
+        with:
+          context: .
+          file: horologium.Dockerfile
+          push: true
+          tags: |
+            zhangsean/k8s-prow-horologium:latest,
+            zhangsean/k8s-prow-horologium:${{ env.LATEST }}
+      -
+        name: Build and push plank
+        uses: docker/build-push-action@v2
+        if: success() && env.LATEST != ''
+        with:
+          context: .
+          file: plank.Dockerfile
+          push: true
+          tags: |
+            zhangsean/k8s-prow-plank:latest,
+            zhangsean/k8s-prow-plank:${{ env.LATEST }}
+      -
+        name: Build and push sinker
+        uses: docker/build-push-action@v2
+        if: success() && env.LATEST != ''
+        with:
+          context: .
+          file: sinker.Dockerfile
+          push: true
+          tags: |
+            zhangsean/k8s-prow-sinker:latest,
+            zhangsean/k8s-prow-sinker:${{ env.LATEST }}
+      -
+        name: Build and push status-reconciler
+        uses: docker/build-push-action@v2
+        if: success() && env.LATEST != ''
+        with:
+          context: .
+          file: status-reconciler.Dockerfile
+          push: true
+          tags: |
+            zhangsean/k8s-prow-status-reconciler:latest,
+            zhangsean/k8s-prow-status-reconciler:${{ env.LATEST }}
+      -
+        name: Build and push tide
+        uses: docker/build-push-action@v2
+        if: success() && env.LATEST != ''
+        with:
+          context: .
+          file: tide.Dockerfile
+          push: true
+          tags: |
+            zhangsean/k8s-prow-tide:latest,
+            zhangsean/k8s-prow-tide:${{ env.LATEST }}
