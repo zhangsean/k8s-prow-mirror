@@ -4,13 +4,13 @@ Prow images mirror.
 
 gcr.io | docker hub
 ---|---
-gcr.io/k8s-prow/deck:v20210831-87a76d4505 | [zhangsean/k8s-prow-deck](https://hub.docker.com/r/zhangsean/k8s-prow-deck):v20210831-87a76d4505
-gcr.io/k8s-prow/hook:v20210831-87a76d4505 | [zhangsean/k8s-prow-hook](https://hub.docker.com/r/zhangsean/k8s-prow-hook):v20210831-87a76d4505
-gcr.io/k8s-prow/horologium:v20210831-87a76d4505 | [zhangsean/k8s-prow-horologium](https://hub.docker.com/r/zhangsean/k8s-prow-horologium):v20210831-87a76d4505
-gcr.io/k8s-prow/plank:v20210831-87a76d4505 | [zhangsean/k8s-prow-plank](https://hub.docker.com/r/zhangsean/k8s-prow-plank):v20210831-87a76d4505
-gcr.io/k8s-prow/sinker:v20210831-87a76d4505 | [zhangsean/k8s-prow-sinker](https://hub.docker.com/r/zhangsean/k8s-prow-sinker):v20210831-87a76d4505
-gcr.io/k8s-prow/status-reconciler:v20210831-87a76d4505 | [zhangsean/k8s-prow-status-reconciler](https://hub.docker.com/r/zhangsean/k8s-prow-status-reconciler):v20210831-87a76d4505
-gcr.io/k8s-prow/tide:v20210831-87a76d4505 | [zhangsean/k8s-prow-tide](https://hub.docker.com/r/zhangsean/k8s-prow-tide):v20210831-87a76d4505
+gcr.io/k8s-prow/deck:v20210901-c28d23f23a | [zhangsean/k8s-prow-deck](https://hub.docker.com/r/zhangsean/k8s-prow-deck):v20210901-c28d23f23a
+gcr.io/k8s-prow/hook:v20210901-c28d23f23a | [zhangsean/k8s-prow-hook](https://hub.docker.com/r/zhangsean/k8s-prow-hook):v20210901-c28d23f23a
+gcr.io/k8s-prow/horologium:v20210901-c28d23f23a | [zhangsean/k8s-prow-horologium](https://hub.docker.com/r/zhangsean/k8s-prow-horologium):v20210901-c28d23f23a
+gcr.io/k8s-prow/plank:v20210901-c28d23f23a | [zhangsean/k8s-prow-plank](https://hub.docker.com/r/zhangsean/k8s-prow-plank):v20210901-c28d23f23a
+gcr.io/k8s-prow/sinker:v20210901-c28d23f23a | [zhangsean/k8s-prow-sinker](https://hub.docker.com/r/zhangsean/k8s-prow-sinker):v20210901-c28d23f23a
+gcr.io/k8s-prow/status-reconciler:v20210901-c28d23f23a | [zhangsean/k8s-prow-status-reconciler](https://hub.docker.com/r/zhangsean/k8s-prow-status-reconciler):v20210901-c28d23f23a
+gcr.io/k8s-prow/tide:v20210901-c28d23f23a | [zhangsean/k8s-prow-tide](https://hub.docker.com/r/zhangsean/k8s-prow-tide):v20210901-c28d23f23a
 
 ## Usage
 
