@@ -1,1 +1,1 @@
-FROM gcr.io/k8s-prow/prow-controller-manager:v20210901-c28d23f23a
+FROM gcr.io/k8s-prow/prow-controller-manager:v20210902-3cdc3ee299
