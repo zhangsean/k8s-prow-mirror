@@ -1,1 +1,1 @@
-FROM gcr.io/k8s-prow/horologium:v20210909-6c59eee681
+FROM gcr.io/k8s-prow/horologium:v20210913-9daaadfb75
